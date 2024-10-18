@@ -12,6 +12,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -28,6 +33,9 @@
     "assignee": "akuryanov"
   }
 }]]></component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="434705eb-6d89-4285-ac1d-80271c8e1e9c" />
+  </component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/akuryanov/Urban_Universiry.git",
@@ -100,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729243451090</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="18/10">
+      <option name="closed" value="true" />
+      <created>1729243844316</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729243844316</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
