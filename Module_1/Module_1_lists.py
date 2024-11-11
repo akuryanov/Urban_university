@@ -8,7 +8,7 @@ food = ['apple', 'coconut', 'banana']
 # print(food)
 food.append(True) # Добавление элемента в конец списка
 print(food)
-food.
+
 # food.extend('string')
 # print(food)
 # food.extend(['string'])
