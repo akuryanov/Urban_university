@@ -2,7 +2,7 @@ def string_info(string):
     global calls
     number_of_characters = len(string)
     string_upper = string.upper()
-    string_lower = string_upper.lower()
+    string_lower = string.lower()
     count_calls()
     return number_of_characters, string_upper, string_lower
 
