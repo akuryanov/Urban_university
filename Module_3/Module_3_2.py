@@ -5,9 +5,12 @@ def send_email(message, recipient, *, sender='university.help@gmail.com'):
     if '@' not in recipient or '@' not in sender:
         print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}.')
 
-    # Проверка корректного окончания почты отправителя и получателя
-    elif ((not recipient.endswith('.com') and not recipient.endswith('.ru') and not recipient.endswith('.net'))
-          or (not sender.endswith('.com') and not sender.endswith('.ru') and not sender.endswith('.net'))):
+    # Проверка корректного окончания почты получателя
+    elif not recipient.endswith('.com') and not recipient.endswith('.ru') and not recipient.endswith('.net'):
+        print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}.')
+
+    # Проверка корректного окончания почты отправителя
+    elif not sender.endswith('.com') and not sender.endswith('.ru') and not sender.endswith('.net'):
         print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}.')
 
     elif recipient == sender:
@@ -26,7 +29,7 @@ send_email('Это сообщение для проверки связи', 'vasy
 
 send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
 
-send_email('Пожалуйста, исправьте задание', 'urban.student@mail.com', sender='urban.teacher@mail.uk')
+send_email('Пожалуйста, исправьте задание', 'urban.student@mail.uk', sender='urban.teacher@mail.com')
 
 send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
 
