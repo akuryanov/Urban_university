@@ -9,6 +9,9 @@ def get_multiplied_digits(number):
 result = get_multiplied_digits(40203)
 print(result)
 
+result = get_multiplied_digits(402035615664561)
+print(result)
+
 result = get_multiplied_digits(6)
 print(result)
 
