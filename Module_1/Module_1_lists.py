@@ -7,12 +7,12 @@ food = ['apple', 'coconut', 'banana']
 # print(food[0])
 # print(food)
 food.append(True) # Добавление элемента в конец списка
-print(food)
+# print(food)
 
 # food.extend('string')
 # print(food)
-# food.extend(['string'])
-# print(food)
+food.extend(['string'])
+print(food)
 # food.remove('peach') # удаление элемента списка
 # print(food)
 #
