@@ -115,13 +115,29 @@
 # test_info('пример использования параметров всех типов', 1, 2, 3, 4, name_author='Denis', name = 'Den', course = 'Python')
 
 
-def my_sum(n, *args, txt = 'Сумма чисел'):
-    s = 0
-    for i in args:
-        s += i ** n
-    print(txt + ':',s)
+# def my_sum(n, *args, txt = 'Сумма чисел'):
+#     s = 0
+#     for i in args:
+#         s += i ** n
+#     print(txt + ':',s)
+#
+# my_sum(1, 1, 2, 3, 4, 5)
+# my_sum(2, 1, 2, 3, 4, 5, txt = 'Сумма квадратов')
+# list_ = [2, 3, 4, 5, 6]
+#
+# my_sum(3, *list_, txt = 'Сумма кубов')
 
-my_sum(1, 1, 2, 3, 4, 5)
-my_sum(2, 1, 2, 3, 4, 5, txt = 'Сумма квадратов')
-list_ = [2, 3, 4, 5, 6]
-my_sum(3, *list_, txt = 'Сумма кубов')
+
+# Рекурсия
+'''
+Рекурсия — это такой способ определения функции или описание функции, когда эта самая функция вызывает саму себя.
+'''
+
+def summa(n):
+    if n == 0:
+        return 0
+    else:
+        return n + summa(n-1)
+
+print(summa(5))
+
