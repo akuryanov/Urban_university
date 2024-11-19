@@ -132,12 +132,97 @@
 '''
 Рекурсия — это такой способ определения функции или описание функции, когда эта самая функция вызывает саму себя.
 '''
+#
+# def summa(n):
+#     if n == 0:
+#         return 0
+#     else:
+#         return n + summa(n-1)
+#
+# print(summa(5))
 
-def summa(n):
-    if n == 0:
-        return 0
-    else:
-        return n + summa(n-1)
+# Встроенные функции
 
-print(summa(5))
+# int()
+# float()
+# bool()
+# str() - строка
+# list() - список
+# tuple() - кортеж
+# dict() - словарь
+# set() - множество
+# input()
+# round() - количество знаков после запятой
+# salarys = [2300, 1800.48, 5000, 1234.8, 7500.12,]
+# average = round(sum(salarys)/len(salarys), 2)
+# print(f'Средняя зарплата - {average}')
+# print(f'Максимальная зарплата - {round(max(salarys), 2)}')
+# print(f'Минимальная зарплата - {round(min(salarys), 2)}')
+# print('===========================')
+# names_ = ['Денис', 'Антон', 'Егор', 'Катя', 'Женя']
+# zipped_list = list(zip(names_, salarys)) # Создаем список кортежей
+# print(zipped_list)
+# print('Зарплата Дениса - ', zipped_list[0])
+# print('===========================')
+# zipped_dict = dict(zip(names_, salarys)) # создаем словарь
+# print(zipped_dict)
+# print('Зарплата Дениса - ', zipped_dict['Денис'])
 
+# # any()
+# a = [True, False, False]
+# print(any(a))
+#
+# a = [False, False, False]
+# print(any(a))
+#
+# a = [1, 2, 0]
+# print(any(a))
+#
+# a = [0, 0, 0]
+# print(any(a))
+#
+# b = ''
+# print(any(b))
+# b = '0'
+# print(any(b))
+#
+# # all()
+#
+# # dir()
+
+'''
+Практикум
+'''
+# def find_max(list_): # Нахожение максимального значения списка
+#     max_ = list_[0]
+#     for i in list_:
+#         if i > max_:
+#             max_ = i
+#     return max_
+#
+# list_ = [-1, -3, 0, 8, 9, 0]
+# print(find_max(list_))
+#
+# def count_even(list_): # Нахождение четных чисел в списке
+#     counter = 0
+#     for i in list_:
+#         if i == 0:
+#             continue
+#         if i % 2 == 0:
+#             counter += 1
+#     return counter
+#
+# list_ = [-1, -4, 0, 8, 9, 0, 2, 4, 6, 5, 7, 2]
+# print(count_even(list_))
+#
+# def unique(list_): # уникальный список
+#     new_list_ = []
+#     for i in list_:
+#         if i not in new_list_:
+#             new_list_.append(i)
+#     return new_list_
+#
+# list_ = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
+# print(unique(list_))
+
+'''==========================================================='''

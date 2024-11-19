@@ -12,8 +12,12 @@ print_param(c = [1, 2, 3])
 
 values_list = [5, 'string_list', True]
 values_dict = {'a' : 3, 'b' : 'string_dict', 'c' : False}
+
+print(('*'))
 print_param(*values_list)
+print('**')
 print_param(**values_dict)
+
 print_param(*values_dict)
 
 values_list2 = [8, 'string_list-2', 42]
