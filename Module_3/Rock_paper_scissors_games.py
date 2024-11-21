@@ -40,19 +40,20 @@ def players_move():
 
 
 def bot_move():
-    global lst, bot
+    global index_bot
     lst = ['камень', 'ножницы', 'бумага']
     bot = random.choice(lst)
-    return bot
+    index_bot = int(lst.index(bot)) + 1
+    return index_bot
 
 def win():
     global player_win, bot_win, draw, win_
-    if lst[players - 1] == bot:
+    if players == index_bot:
         win_ = 'Ничья'
         draw  = draw  + 1
-    elif ((players == 1 and bot == ('ножницы'))
-          or (players == 2 and bot == ('бумага'))
-          or (players == 3 and bot == ('камень'))):
+    elif ((players == 1 and index_bot == 2)
+          or (players == 2 and index_bot == 3)
+          or (players == 3 and index_bot == 1)):
         win_ = ('Победил игрок')
         player_win = player_win + 1
     else:
@@ -62,27 +63,26 @@ def win():
     return win_, player_win, bot_win, draw
 
 def play ():
-    global win_
-    global total_win, player_win, bot_win, draw
+    global total_win
     players_move()
     bot_move()
     while players > 0 and players <= 3:
-            win()
-            total_win = player_win + bot_win + draw
-            print()
-            print('-----------------------------------------------------------------------------------------------')
-            print(win_)
-            print('-----------------------------------------------------------------------------------------------')
-            print()
-            players_move()
-            bot_move()
+        win()
+        total_win = player_win + bot_win + draw
+        print()
+        print('-----------------------------------------------------------------------------------------------')
+        print(win_)
+        print('-----------------------------------------------------------------------------------------------')
+        print()
+        players_move()
+        bot_move()
     return total_win
 
-player_win = 0
-bot_win = 0
-draw = 0
-total_win = 0
-win_ = ''
+player_win = 0 # Счетчик побед игрока
+bot_win = 0 # Счетчик побед компьютера
+draw = 0 # Счетчик ничьих
+total_win = 0  # Счетчик игр
+win_ = '' # Сообщение о победителе
 
 play()
 
