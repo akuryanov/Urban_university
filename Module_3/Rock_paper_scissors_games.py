@@ -14,13 +14,12 @@
 # Дополнительно:
 # 1) добавьте возможность сыграть не один раз, а несколько
 # 2) после завершения игры сделайте вывод кол-ва побед и поражений (предусмотрите вариант ничьи)
-import random
-from errno import EFBIG
 
+import random
 
 def players_move():
     global lst, players
-    players = input('Выберете 1- камень, 2- ножницы или 3- бумага, 0 - для выхода из игры: ')
+    players = input('Для игры введите: \n1 - камень, \n2 - ножницы или \n3 - бумага, \nдля выхода из игры введите 0 \n>>> ')
     try:
         if int(players) >= 0 and int(players) < 4:
             players = int(players)
