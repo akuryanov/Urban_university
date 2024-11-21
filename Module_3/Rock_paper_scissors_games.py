@@ -18,12 +18,11 @@
 import random
 
 def players_move():
-    global lst, players
+    global players
     players = input('Для игры введите: \n1 - камень, \n2 - ножницы или \n3 - бумага, \nдля выхода из игры введите 0 \n>>> ')
     try:
         if int(players) >= 0 and int(players) < 4:
             players = int(players)
-            return players
         else:
             print()
             print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
@@ -51,13 +50,9 @@ def win():
     if lst[players - 1] == bot:
         win_ = 'Ничья'
         draw  = draw  + 1
-    elif players == 1 and bot == ('ножницы'):
-        win_ = ('Победил игрок')
-        player_win = player_win + 1
-    elif players == 2 and bot == ('бумага'):
-        win_ = ('Победил игрок')
-        player_win = player_win + 1
-    elif players == 3 and bot == ('камень'):
+    elif ((players == 1 and bot == ('ножницы'))
+          or (players == 2 and bot == ('бумага'))
+          or (players == 3 and bot == ('камень'))):
         win_ = ('Победил игрок')
         player_win = player_win + 1
     else:
@@ -77,7 +72,6 @@ def play ():
             print()
             print('-----------------------------------------------------------------------------------------------')
             print(win_)
-            print(f'всего сыграно {total_win} игр, ничьих {draw}, побед игрока {player_win}, побед бота {bot_win}')
             print('-----------------------------------------------------------------------------------------------')
             print()
             players_move()
@@ -94,5 +88,5 @@ play()
 
 print()
 print('==============================================================================================')
-print(f'     Всего сыграно {total_win} игр, ничьих {draw}, побед игрока {player_win}, побед бота {bot_win}')
+print(f'     Всего сыграно {total_win} игр, ничьих {draw}, побед игрока {player_win}, побед компьютера {bot_win}')
 print('==============================================================================================')
