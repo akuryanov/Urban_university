@@ -3,7 +3,7 @@ def divide(first, second):
         result = first / second
         print(f'{first} / {second} = {result}')
     except ZeroDivisionError:
-        print(f'{first} / {second} Ошибка! На ноль делить нельзя')
+        print(f'{first} / {second} !!!Ошибка!!!\nНа ноль делить нельзя')
 
 
 
