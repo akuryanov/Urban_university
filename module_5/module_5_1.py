@@ -9,10 +9,30 @@ class House:
         else:
             for i in range(1, new_floor + 1):
                 print(i)
+    def __len__(self):
+        return self.number_of_floors
 
+    # def __str__(self):
+    #     return self.name
 
-h1 = House('ЖК Горский', 18)
-h2 = House('Домик в деревне', 2)
+    def __str__(self):
+        return f'Название: {self.name}, количество этажей {self.number_of_floors}'
 
-h1.go_to(5)
-h2.go_to(10)
+# h1 = House('ЖК Горский', 18)
+# h2 = House('Домик в деревне', 2)
+#
+# h1.go_to(5)
+# h2.go_to(10)
+
+h1 = House('ЖК Эльбрус', 10)
+h2 = House('ЖК Акация', 20)
+
+# print(f'{h1.name}, количество этажей {h1.number_of_floors}')
+# print(f'{h2.name}, количество этажей {h2.number_of_floors}')
+# print(f'{str(h1)}, количество этажей {len(h1)}')
+# print(f'{str(h1)}, количество этажей {len(h1)}')
+
+print(h1)
+print(h2)
+print(len(h1))
+print(len(h2))

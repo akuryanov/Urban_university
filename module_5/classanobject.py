@@ -10,6 +10,8 @@ class Human:
         self.age = age
         self.say_info()
 
+
+
     def say_info(self):
         print(f'Привет, меня зовут {self.name}, мне {self.age}')
 
@@ -17,13 +19,19 @@ class Human:
         self.age += 1
         print(f'У меня сегодня День рождения, мне теперь {self.age}')
 
+    def __len__(self):
+        return self.age # Возвращаем возраст
+
+    def __del__(self): # Деструктор класса удаляет объекты из памяти
+        print(f'{self.name} ушёл')
 
 den = Human('Денис', 22)
 max = Human('Максим', 23)
 
+del den
 # Атрибуты, или характеристики, можно задавать и вручную
-den.surname = 'Попов'
-print(den.surname)
+# den.surname = 'Попов'
+# print(den.surname)
 # Таким образом, был добавлен атрибут, который не задается при инициализации,
 # то есть не при создании объекта, а возникает в процессе работы программы.
 
