@@ -1,14 +1,21 @@
 # Класс - создает собственный тип данных
 # Атрибуты представляют собой переменные внутри класса,
 # а методы — функции, определенные внутри него
-# self является указателем на сам объект
+''' self - обязательный аргумент, содержащий в себе экземпляр класса,
+    передающийся при вызове метода, поэтому этот аргумент должен присутствовать во всех методах класса
+
+'''
 
 
+#
 class Human:
-    def __init__(self, name, age): # Конструктор класса
-        self.name = name
-        self.age = age
+    head = True # Атрибут класса
+
+    def __init__(self, name, age):  # Конструктор класса
+        self.name = name  # Атрибут объекта класса
+        self.age = age  # Атрибут объекта класса
         self.say_info()
+
 
     def say_info(self):
         print(f'Привет, меня зовут {self.name}, мне {self.age}')
@@ -49,20 +56,58 @@ den = Human('Денис', 22)
 max = Human('Максим', 22)
 
 # del den
+
 # Атрибуты, или характеристики, можно задавать и вручную
 # den.surname = 'Попов'
 # print(den.surname)
 # Таким образом, был добавлен атрибут, который не задается при инициализации,
 # то есть не при создании объекта, а возникает в процессе работы программы.
 
-# print(type(den))
-# print(den.name, den.age)
+print(type(den))
+print(den.name, den.age)
 # print(max.name, max.age)
 # den.say_info()
 # max.say_info()
 # birthday()
-print(den)
-print(den < max)
-max.birthday()
-print(den < max)
+# print(den)
+# print(den < max)
+# max.birthday()
+# print(den < max)
+
+# print(Human.head)
+#
+# # print(Human.__dict__)
+#
+# print('Атрибуты экземпляра den', den.__dict__)
+# print('Атрибуты экземпляра max', max.__dict__)
+#
+#
+# den.head = False # Создан атрибут экземпляра den
+# print(den.head)
+#
+# print('Атрибуты экземпляра den', den.__dict__)
+# print('Атрибуты экземпляра max', max.__dict__)
+
+
+
+# Класс Object и магический метод '__new__()'.
+
+# print(int.__mro__) # Отражает цепочку наследования
+
+
+# class User:
+#     def __new__(cls, *args, **kwargs):
+#         print('Я в new')
+#         return super().__new__(cls)  # Создание нового экземпляра с соответствующими аргументами
+#
+#     def __init__(self):
+#         print('Я в init')
+#
+#
+# user1 = User()
+# user2 = User()
+#
+# print(id(user1), id(user2))
+#
+# # print(User.__mro__)
 
