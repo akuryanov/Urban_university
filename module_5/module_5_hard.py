@@ -71,10 +71,11 @@ class UrTube:
         elif self.current_user.age < 18:
             print(f'{self.current_user.nickname}. Вам нет 18 лет, пожалуйста покиньте страницу')
         else:
-            for i in range (1, video.duration + 1):
+            i = 1
+            while i <= video.duration:
                 print(i, end=' ')
+                i += 1
                 sleep(1)
-
             print('Конец видео')
 
 # Код для проверки:
