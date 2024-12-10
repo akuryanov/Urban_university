@@ -74,6 +74,7 @@ class UrTube:
             for i in range (1, video.duration + 1):
                 print(i, end=' ')
                 sleep(1)
+
             print('Конец видео')
 
 # Код для проверки:
@@ -82,27 +83,26 @@ v1 = Video('Лучший язык программирования 2024 года
 v2 = Video('Для чего девушкам парень программист?', 10, adult_mode=True)
 v3 = Video('Лучший язык программирования 2024 года', 200)
 v4 = Video('Для чего девушкам парень программист?', 10)
+
 # Добавление видео
 ur.add(v1, v2, v3, v4)
-
+print()
 # Проверка поиска
 print(ur.get_videos('лучший'))
 print(ur.get_videos('ПРОГ'))
-
+print()
 # Проверка на вход пользователя и возрастное ограничение
 ur.watch_video('Для чего девушкам парень программист?')
-
 ur.register('vasya_pupkin', 'lolkekcheburek', 13)
-
 ur.watch_video('Для чего девушкам парень программист?')
-
+print()
 ur.register('urban_pythonist', 'iScX4vIJClb9YQavjAgF', 25)
 ur.watch_video('Для чего девушкам парень программист?')
-
+print()
 # Проверка входа в другой аккаунт
 ur.register('vasya_pupkin', 'F8098FM8fjm9jmi', 55)
 print(ur.current_user)
-
+print()
 # Попытка воспроизведения несуществующего видео
 ur.watch_video('Лучший язык программирования 2024 года!')
 
