@@ -85,8 +85,8 @@ print(den.name, den.age)
 # den.head = False # Создан атрибут экземпляра den
 # print(den.head)
 #
-# print('Атрибуты экземпляра den', den.__dict__)
-# print('Атрибуты экземпляра max', max.__dict__)
+print('Атрибуты экземпляра den', den.__dict__)
+print('Атрибуты экземпляра max', max.__dict__)
 
 
 
