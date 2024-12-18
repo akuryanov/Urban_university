@@ -2,10 +2,10 @@ import math
 
 class Figure:
     sides_count = 0
-
     def __init__(self, __color: list, *__sides: list):
         self.sides = list(__sides)
         self.color = __color
+        self.filled = True
 
         if len(self.sides) != 1:
             self.sides = 1
@@ -31,7 +31,6 @@ class Figure:
         return list_
 
     def __len__(self):
-
         if isinstance(self.sides, list):
             self.sides = self.sides[0]
         return self.sides * self.sides_count
@@ -48,7 +47,6 @@ class Circle(Figure):
 
     def get_square(self):
         __radius = self.sides / (2 * math.pi)
-
         return f'Площадь круга {math.pi * __radius**2} кв. единиц'
 
 class Triangle(Figure):
