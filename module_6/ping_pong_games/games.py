@@ -18,8 +18,8 @@ class Bar(arcade.Sprite):
 class Ball(arcade.Sprite):
     def __init__(self):
         super().__init__('ball.png', 0.08)
-        self.change_x = 3
-        self.change_y = 3
+        self.change_x = 5
+        self.change_y = 5
 
     def update(self):
         self.center_x += self.change_x
