@@ -55,7 +55,7 @@
 #         print(key)
 #
 # list_ = [1, 2, 3]
-# print_params(list_, 4, 5)
+# print_params_1(list_, 4, 5)
 #
 # print_params(*list_) # Распаковка передаваемого параметра
 # print_params_1(list_)
