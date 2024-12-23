@@ -50,16 +50,16 @@ print(finder2.get_all_words())
 
 print(finder2.find('TEXT'))
 print( finder2.count('Text'))
-
+print()
 finder2 = WordsFinder('file_1.txt', 'file_2.txt', 'file_3.txt')
 
 print(finder2.get_all_words())
-print(finder2.find('Text_2_2'))
-print(finder2.find('Text_1_1'))
-print(finder2.find('Text_3_2'))
-print(finder2.find('Text_3_7'))
-print(finder2.count('Text_3_7'))
-
+# print(finder2.find('Text_2_2'))
+# print(finder2.find('Text_1_1'))
+# print(finder2.find('Text_3_2'))
+# print(finder2.find('Text_3_7'))
+# print(finder2.count('Text_3_7'))
+print()
 finder1 = WordsFinder('Walt Whitman - O Captain! My Captain!.txt',
                       'Rudyard Kipling - If.txt',
                       'Mother Goose - Monday’s Child.txt')
