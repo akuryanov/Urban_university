@@ -7,7 +7,7 @@ class WordsFinder:
         punct = [',', '.', '=', '!', '?', ';', ':', ' - ']
         str_ = ''
         for file_name in self.file:
-            line_ = []
+
             with open(file_name, encoding='utf-8') as file:
                 for line in file:
                     line = line.lower() # Переводим строки в нижний регистр
@@ -37,7 +37,7 @@ class WordsFinder:
         word = word.lower()
         content = self.get_all_words()
         for self.file, words in content.items():
-            # counts = 0
+
             if word in words:
                 counts = words.count(word)
                 dict_.update({self.file: counts})
