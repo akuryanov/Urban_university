@@ -11,7 +11,6 @@ def custom_write(file_name, strings):
     file.close()
     return strings_positions
 
-
 info = [
     'Text for tell.',
     'Используйте кодировку utf-8.',
