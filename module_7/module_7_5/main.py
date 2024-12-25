@@ -7,6 +7,7 @@ for root, dirs, files in os.walk(current_path):
     # root - строка вершина каталога
     # dirs - список вложенных каталогов
     # files - список файлов в каталоге
+
     for file in files:
         filepath = f'{os.path.join(root)}/{file}'
         parent_dir = os.path.dirname(root)

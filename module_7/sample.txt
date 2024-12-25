@@ -1,4 +1,1 @@
-This is special text for test
-Second row of text
-Third row of text
-First row of text
+файл sample.txt
