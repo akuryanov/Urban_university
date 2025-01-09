@@ -9,5 +9,6 @@ second_result = [(elem_first, elem_second) for elem_first in first_strings for e
 print(second_result)
 
 third_strings = first_strings + second_strings
+
 third_result = {elem: len(elem) for elem in third_strings if len(elem) % 2 == 0}
 print(third_result)
