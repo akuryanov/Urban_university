@@ -75,10 +75,10 @@
 
 # Генераторные сборки
 
-my_numbers = [3, 1, 4 , 1, 5, 9, 2, 6]
-result = (x ** 100 for x in my_numbers) # Пример генераторной сборки
-
-print(result)
+# my_numbers = [3, 1, 4 , 1, 5, 9, 2, 6]
+# result = (x ** 100 for x in my_numbers) # Пример генераторной сборки
+#
+# print(result)
 
 
 
