@@ -1,3 +1,4 @@
+# Домашнее задание по теме "Try и Except"
 def add_everything_up(a, b):
     try:
         return a + b
