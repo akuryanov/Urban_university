@@ -1,5 +1,4 @@
-from turtledemo.forest import start
-
+# Домашнее задание по теме "Итераторы"
 
 class StepValueError(ValueError):
     pass

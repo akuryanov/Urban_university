@@ -1,3 +1,5 @@
+# Домашнее задание по теме "Введение в функциональное программирование"
+
 def apply_all_func(int_list, *functions):
     result = {}
     for function in functions:
