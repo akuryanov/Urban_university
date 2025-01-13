@@ -1,3 +1,5 @@
+# Домашнее задание по теме "Создание потоков"
+
 import threading
 from datetime import datetime
 import time
