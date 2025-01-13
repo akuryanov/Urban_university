@@ -5,36 +5,68 @@
 
 # Создание декоратора
 # Вариант 1
-def null_decorator(func):
-    return func
+# def null_decorator(func):
+#     return func
+#
+# def greet():
+#     return 'Hello!'
+#
+# greet = null_decorator(greet)
+#
+# print(greet())
+#
+# # Вариант 2
+# def null_decorator(func):
+#     return func
+# @null_decorator
+# def greet():
+#     return 'Hello!'
+# print(greet())
+#
+# # Вариант 3 определение функции на лету внутри декоратора
+#
+# def uppercase(func):
+#     def wrapper():
+#         original_result = func()
+#         modified_result = original_result.upper()
+#         return modified_result
+#     return wrapper
+#
+# @uppercase
+# def greet():
+#     return 'Hello!'
+#
+# print(greet())
 
-def greet():
-    return 'Hello!'
+# =================================================================
+# Практика
+# =================================================================
 
-greet = null_decorator(greet)
+# 1 - написать функцию, которая возвращает функцию повторения двух первых символов n раз
+# 2 - создать массив функций и применить все функции поочередно к аргументу
+# 3 - применить все функции поочередно к массиву аргументов
 
-print(greet())
+# 1
+animal = 'мишка'
+animals = ['зайка', 'мишка', 'бегемотик']
 
-# Вариант 2
-def null_decorator(func):
-    return func
-@null_decorator
-def greet():
-    return 'Hello!'
-print(greet())
+def gen_repeat(n):
+    def repeat(animal):
+        return (animal[:2] + '-') * n + animal
+    return repeat
 
-# Вариант 3 определение функции на лету внутри декоратора
+test1 = gen_repeat(1)
+test2 = gen_repeat(2)
+print(test1(animal))
+print(test2(animal))
 
-def uppercase(func):
-    def wrapper():
-        original_result = func()
-        modified_result = original_result.upper()
-        return modified_result
-    return wrapper
+# 2
+repetition = [gen_repeat(n) for n in range(1, 4)]
+result = [func(animal) for func in repetition]
+print(result)
 
-@uppercase
-def greet():
-    return 'Hello!'
+# 3
+fin_result = [func(x) for func in repetition for x in animals]
+print(fin_result)
 
-print(greet())
 
