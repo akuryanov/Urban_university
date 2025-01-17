@@ -3,9 +3,6 @@
 import threading
 import time
 
-from gevent.libev.watcher import timer
-from requests.packages import target
-
 # Можно создавать потоки используя класс threading.Thread
 #
 # def func1():
@@ -59,30 +56,66 @@ from requests.packages import target
 
 # Проблема многопоточности
 
-counter = 0
-lock = threading.Lock()
+# counter = 0
+# lock = threading.Lock()
+#
+# def increment(name):
+#     global counter
+#     lock.acquire()
+#     for i in range(1000):
+#
+#         counter += 1
+#         print(name, counter)
+#     lock.release()
+# def decrement(name):
+#     global counter
+#     lock.acquire()
+#     for i in range(1000):
+#         counter -= 1
+#         print(name, counter)
+#     lock.release()
+#
+# thread1 = threading.Thread(target=increment, args=('thread1', ))
+# thread2 = threading.Thread(target=increment, args=('thread2', ))
+# thread3 = threading.Thread(target=decrement, args=('thread3', ))
+# thread4 = threading.Thread(target=decrement, args=('thread4', ))
+# thread1.start()
+# thread2.start()
+# thread3.start()
+# thread4.start()
 
-def increment(name):
-    global counter
-    lock.acquire()
-    for i in range(1000):
+# GIL (Global Interpreter Lock -Глобальная блокировка интерпретатора)
+# def count_up(name, n):
+#     for i in range(n):
+#         print(f'{name}: {i}' )
+#
+#
+# t1 = Thread(target=count_up, args=('Thread1', 25))
+# t2 = Thread(target=count_up, args=('Thread2', 25))
+#
+# t1.start()
+# t2.start()
+#
+# t1.join()
+# t2.join()
 
-        counter += 1
-        print(name, counter)
-    lock.release()
-def decrement(name):
-    global counter
-    lock.acquire()
-    for i in range(1000):
-        counter -= 1
-        print(name, counter)
-    lock.release()
 
-thread1 = threading.Thread(target=increment, args=('thread1', ))
-thread2 = threading.Thread(target=increment, args=('thread2', ))
-thread3 = threading.Thread(target=decrement, args=('thread3', ))
-thread4 = threading.Thread(target=decrement, args=('thread4', ))
-thread1.start()
-thread2.start()
-thread3.start()
-thread4.start()
+def some_func():
+    time.sleep(4)
+    raise Exception
+
+def thread_func():
+    try:
+        some_func()
+    except Exception as e:
+        print('Wow! Exception')
+
+t1= threading.Thread(target=thread_func)
+t2= threading.Thread(target=thread_func)
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
