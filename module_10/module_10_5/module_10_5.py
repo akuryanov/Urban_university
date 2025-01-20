@@ -23,11 +23,9 @@ print(f'Линейный вызов, время выполнения - {end_time
 
 start_time = datetime.now()
 if __name__ == '__main__':
-    i = 1
-    for filename in filenames:
-        process_name = 'process' + 'i'
-        process_name = multiprocessing.Process(target=read_info, args=(filename,))
-        process_name.start()
+
+    with multiprocessing.Pool(4) as p:
+        p.map(read_info, filenames)
 
 end_time = datetime.now()
 print(f'Многопроцессный вызов, время выполнения - {end_time - start_time}')
