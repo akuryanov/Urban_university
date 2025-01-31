@@ -15,7 +15,7 @@ import requests
 # pprint(dir(requests)) # Выводит информацию в столбик
 # help(pandas)
 # pprint(dir(pandas))
-#
+# #
 # def my_function():
 #     pass
 #
@@ -31,7 +31,7 @@ import requests
 # attr_name = 'attribute'
 
 # ------------------------- hasattr(), getattr()
-
+#
 # print(f'наличие атрибута attr_name - {hasattr(my_obj, attr_name)}') # hasattr - Проверка наличия атрибута
 # print(f'наличие атрибута my_attr - {hasattr(my_obj, "my_attr")}')
 # print(getattr(my_obj, 'my_attr')) # getattr - Получение атрибута
@@ -68,11 +68,11 @@ import requests
 # print(sys.executable)
 # print(sys.platform)
 
-def factorial(n):
-    if n ==1:
-        return 1
-    else:
-        return n * factorial(n-1)
-
-sys.setrecursionlimit(6000)
-print(factorial(5000))
+# def factorial(n):
+#     if n ==1:
+#         return 1
+#     else:
+#         return n * factorial(n-1)
+#
+# sys.setrecursionlimit(6000)
+# print(factorial(5000))
